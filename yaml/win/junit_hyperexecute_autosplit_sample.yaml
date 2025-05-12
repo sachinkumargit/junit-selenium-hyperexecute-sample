@@ -1,0 +1,21 @@
+---
+version: 0.1
+runson: win
+
+autosplit: true
+concurrency: 3
+
+pre:
+  - mvn clean install
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
+
+testRunnerCommand: mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest=$test test site surefire-report:report
+
+retryOnFailure: true
+maxRetries: 1
+
+jobLabel: [selenium-junit, win, autosplit]
