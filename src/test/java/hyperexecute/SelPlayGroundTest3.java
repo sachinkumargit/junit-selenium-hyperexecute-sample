@@ -108,24 +108,24 @@ public class SelPlayGroundTest3 {
             js.executeScript("window.scrollBy(0,-500)", "");
             Thread.sleep(1000);
             
-            driver.findElement(By.cssSelector("#isAgeSelected")).click();
+            driver.findElement(By.xpath("//h2[text()='Single Checkbox Demo']//following-sibling::label//input")).click();
             
-            driver.findElement(By.cssSelector("#ex1-check1")).click();
-            driver.findElement(By.cssSelector("#ex1-check2")).click();
-            driver.findElement(By.cssSelector("#ex1-check3")).click();
-            driver.findElement(By.cssSelector("#ex1-check2")).click();
-            driver.findElement(By.cssSelector("#ex1-check3")).click();
-            driver.findElement(By.cssSelector("#ex1-check1")).click();
-            driver.findElement(By.cssSelector("#ex1-check2")).click();
-            driver.findElement(By.cssSelector("#ex1-check3")).click();
-            driver.findElement(By.cssSelector("#ex1-check1")).click();
+            driver.findElement(By.cssSelector("input[name='option1']")).click();
+            driver.findElement(By.cssSelector("input[name='option2']")).click();
+            driver.findElement(By.cssSelector("input[name='option3']")).click();
+            driver.findElement(By.cssSelector("input[name='option2']")).click();
+            driver.findElement(By.cssSelector("input[name='option3']")).click();
+            driver.findElement(By.cssSelector("input[name='option1']")).click();
+            driver.findElement(By.cssSelector("input[name='option2']")).click();
+            driver.findElement(By.cssSelector("input[name='option3']")).click();
+            driver.findElement(By.cssSelector("input[name='option1']")).click();
             
-            driver.findElement(By.cssSelector("#box")).click();
-            driver.findElement(By.cssSelector("#box")).click();
-            driver.findElement(By.cssSelector("#box")).click();
-            driver.findElement(By.cssSelector("#box")).click();
-            driver.findElement(By.cssSelector("#box")).click();
-            driver.findElement(By.cssSelector("#box")).click();
+            driver.findElement(By.cssSelector("div[class='wrapper'] button")).click();
+            driver.findElement(By.cssSelector("div[class='wrapper'] button")).click();
+            driver.findElement(By.cssSelector("div[class='wrapper'] button")).click();
+            driver.findElement(By.cssSelector("div[class='wrapper'] button")).click();
+            driver.findElement(By.cssSelector("div[class='wrapper'] button")).click();
+            driver.findElement(By.cssSelector("div[class='wrapper'] button")).click();
             
             /*Navigating to Radio buttons demo form*/
             driver.navigate().to("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
