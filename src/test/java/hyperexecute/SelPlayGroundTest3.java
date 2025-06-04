@@ -53,6 +53,7 @@ public class SelPlayGroundTest3 {
         capabilities.setCapability("visual", true);
         capabilities.setCapability("video", true);
         capabilities.setCapability("console", true);
+        capabilities.setCapability("selenium_version",  "4.24.0");
 
         try {
             driver = new RemoteWebDriver(new URL("https://" + user_name + ":" + access_key + gridURL), capabilities);

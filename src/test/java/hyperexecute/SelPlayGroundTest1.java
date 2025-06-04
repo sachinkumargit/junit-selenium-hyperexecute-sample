@@ -57,6 +57,7 @@ public class SelPlayGroundTest1
         capabilities.setCapability("visual", true);
         capabilities.setCapability("video", true);
         capabilities.setCapability("console", true);
+        capabilities.setCapability("selenium_version",  "4.24.0");
 
         try
         {
